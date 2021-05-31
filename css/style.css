@@ -1,7 +1,12 @@
+
+/* google fonts roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
 body {
     background: rgb(49, 49, 49);
     width: 100%;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -66,7 +71,8 @@ a {
 
 /* hero section */
 .hero_section{
-    padding: 5rem 0;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
     background: url('../img/hero-np-sd1.jpg') no-repeat center;
     background-size: cover;
     position: relative;
@@ -74,6 +80,69 @@ a {
     z-index: 1;
     left: 0;
     top: 0;
+}
+
+.hero_title{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin: 1.5rem 0;
+}
+.hero_btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    
+}
+.hero_btn_link{
+    display: block;
+    padding: 1rem 1.5rem;
+    min-width: 225px;
+   transition: .3s;
+    border-radius: 5px;
+    margin: .6rem;
+    text-align: center;
+}
+.hero_btn_link-nocolor{
+    border: 2px solid rgb(211, 211, 211);
+    color: rgb(216, 214, 214);
+
+}
+.hero_btn_link-nocolor:hover{
+    border-color: #ffffff;
+    color: rgb(255, 255, 255);
+}
+.hero_btn_link-color{
+    color: rgb(255, 255, 255);
+
+    background: linear-gradient(45deg,#084aff,#4BDDFF);
+   transition: .3s;
+
+}
+.hero_btn_link-color:hover{
+    background: linear-gradient(45deg,#ffffff,#e0e0e0);
+    color: #000;
+}
+
+.mous_container{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mouse_link{
+    color: rgb(218, 218, 218);
+    font-size: 1.5rem;
+}
+.mouse_link:hover{
+    color: #fff;
+}
+
+@media screen and (min-width:540px) {
+    .hero_btn_container{
+        flex-flow: row;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -95,4 +164,12 @@ a {
         font-size: .9rem;
        
     }
+
+    /* hero section */
+    .hero_title{
+        
+        font-size: 3rem;
+        
+    }
+   
 }
